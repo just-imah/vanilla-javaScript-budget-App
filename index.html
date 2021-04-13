@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <title>Budget</title>
+</head>
+<body>
+
+    <div class="container budget">
+        <div class="app-title"> Budget App</div>
+        <div class="budget-header">
+            <div class="balance">
+                <div class="title">balance</div>
+                 <div class="value"></div>
+            </div>
+            
+        </div>
+        <div class="wallet">
+            <div class="income">
+                <div class="title">Income</div>
+                 <div class="total-income"></div>
+            </div>
+            <div class="chart"></div>
+            <div class="outcome">
+                <div class="title">Outcome</div>
+                <div class="total-outcome"></div>
+            </div>
+        </div>
+        <div class="dashboard">
+            <div class=dashboard-title>Dashboard</div>
+            <div class="toggle-menu">
+                <div class="tab1">Income</div>
+                <div class="tab2 active">Expense</div>
+                <div class="tab3">All</div>
+            </div>
+            <div class="hide" id="expense"></div>
+            <div id="income">
+                <ul class="budget-list">
+                    <li class="income" id="0">
+                        <div class="entry"> salary $5000</div>
+                        <div id="edit"><i class="far fa-edit"></i></div>
+                        <div id="delete"><i class="far fa-trash-alt"></i></div>
+                    </li>
+                </ul>
+                <div class="budget-input">
+                    <input type="text" id="income-title-input" name="title" placeholder="title">
+                    <input type="number" id="income-amount-input" name="amount" placeholder="$0">
+                    <div class="add-income"><img src="image/plus.png" alt=""></div>
+                </div>
+            </div>
+            <div class="hide" id="all"></div>
+        </div>
+    </div>
+    
+
+    
+</body>
+</html>
