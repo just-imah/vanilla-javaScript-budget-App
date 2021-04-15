@@ -11,10 +11,7 @@ const outcomeTotal = document.querySelector('.total-outcome');
 const chartElement = document.querySelector('.chart');
 // console.log(chartElement)
 // // toggling buttons
-const expenseBtn = document.querySelector('.tab1');
-const incomeBtn = document.querySelector('.tab2');
-// console.log(incomeBtn)
-const allBtn = document.querySelector(".tab3");
+const buttons = document.getElementsByClassName('tab');
 // dashboard elements
 const expenseElement = document.querySelector("#expense");
 const incomeElement = document.querySelector("#income");
@@ -34,16 +31,59 @@ const incomeTitle = document.getElementById("#income-title-input");
 const incomeAmount = document.getElementById("#income-amount-input");
 
 // // toggling fnx / listen for classname
-document.querySelector('.active').classList.add('active')
-// Element.classList .remove('active');
-// Element.classList .add("active");
 
-expenseBtn.addEventListener('click', function () {
-console.log(expenseBtn);
+for (i = 0; i <= buttons.length - 1; i++) {
+    let button = buttons[i]
+    //   button.classList.remove("active");
+    button.addEventListener("click", () => {
+        console.log(button);
+        removeActive()
+        button.classList.add("active");
+       
+    })
+    // console.log(button[0])
+}
+ 
+function removeActive () {
+    for (i = 0; i <= buttons.length - 1; i++) {
+      let button = buttons[i];
+        button.classList.remove("active");
+      
+      // console.log(button[0])
+    }
+}
+    
+// items = [
+//     'orange', 'mango', 'watermelon'
+// ]
+// console.log(items[1])
 
-    active(expenseBtn)
-    inactive([incomeBtn, allBtn])
-})
+// let person = {
+//     name: 'john',
+//     location: 'uyo',
+//     color: 'black'
+// }
+// console.log(person.name)
+
+
+// document.querySelector('.active').classList.add('active')
+
+
+// let display = document.querySelector(".active")
+// console.log(display)
+
+// let expense = document.getElementById("expenseTab")
+// console.log(expense)
+// expense.classList.add("active");
+// console.log(active)
+// console.log(active);
+
+
+
+// button.addEventListener('click', function () {
+// console.log(button);
+
+// })
 
 // // incomeBtn.addEventListener("click", function () {
 // //     active(incomeBtn);
