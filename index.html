@@ -42,17 +42,22 @@
       <div class="dashboard">
         <div class="dashboard-title mt-3 ml-3">Dashboard</div>
         <div class="toggle-menu">
-          <div class="tab" id="expenseTab">Expenses</div>
+          <div class="tab" id="expenseTab" data-tab="expense">Expenses</div>
           <div class="tab active" id="incomeTab">Income</div>
           <div class="tab" id="allTab">All</div>
         </div>
-        <div class="hide" id="expense"></div>
+        <div class="hide" id="expense">
+
+        </div>
         <div id="income">
           <ul class="budget-list">
-            <li class="income" id="0">
-              <div class="entry">salary $5000</div>
-              <div id="edit"><i class="far fa-edit"></i></div>
-              <div id="delete"><i class="far fa-trash-alt"></i></div>
+            <li class="incomeLists" id="0" data-list="1">
+              <div class="entry" >salary $5000</div>
+               <div id="icons" >
+                 <i class="far fa-edit"></i>
+                 <i class="far fa-trash-alt"></i>
+               </div>
+             
             </li>
           </ul>
           <div class="budget-input">

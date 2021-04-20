@@ -265,17 +265,17 @@ input[type=number] {
     background-repeat: no-repeat;
 }
 
-.dashboard #all ul.list li.income{
+/* .dashboard #all ul.list li.income{
 
-}
+} */
 .dashboard #all ul.budget-list li.expense{
     color: #f0624d;
 }
 
 /* //////// EXPENSE ////////// */
 .dashboard #expense{
-    width: 360px;
-    height: 339px;
+    /* width: 360px;
+    height: 339px; */
     position: relative;
 }
 
