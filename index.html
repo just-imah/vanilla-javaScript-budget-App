@@ -43,13 +43,30 @@
         <div class="dashboard-title mt-3 ml-3">Dashboard</div>
         <div class="toggle-menu">
           <div class="tab" id="expenseTab" data-tab="expense">Expenses</div>
-          <div class="tab active" id="incomeTab">Income</div>
-          <div class="tab" id="allTab">All</div>
+          <div class="tab active" id="incomeTab" data-tab="income">Income</div>
+          <div class="tab" id="allTab" data-tab="all">All</div>
         </div>
-        <div class="hide" id="expense">
-
+        <div class=" pages" id="expense">
+          <h3>expenses</h3>
+          
+          <div class="budget-input">
+            <input
+              type="text"
+              id="income-title-input"
+              name="title"
+              placeholder="title"
+            />
+            <input
+              type="number"
+              id="income-amount-input"
+              name="amount"
+              placeholder="$0"
+            />
+            <div class="add-income"><img src="image/plus.png" alt="" /></div>
+          </div>
         </div>
-        <div id="income">
+        <div id="income" class="pages">
+          <h3>income</h3>
           <ul class="budget-list">
             <li class="incomeLists" id="0" data-list="1">
               <div class="entry" >salary $5000</div>
@@ -76,9 +93,49 @@
             <div class="add-income"><img src="image/plus.png" alt="" /></div>
           </div>
         </div>
-        <div class="hide" id="all"></div>
+        <div class="hide pages" id="all"></div>
       </div>
     </div>
+
+    <!-- <div class="first" style="display: none;">
+      <h1>there</h1>
+    </div>
+    <div class="first" style="display: none;">
+      <h1>hello</h1>
+    </div>
+    <div class="first" style="display: none;">
+      <h1>dens</h1>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

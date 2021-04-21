@@ -12,6 +12,7 @@ const chartElement = document.querySelector(".chart");
 // console.log(chartElement)
 // // toggling buttons
 const buttons = document.getElementsByClassName("tab");
+
 // dashboard elements
 const expenseElement = document.querySelector("#expense");
 const incomeElement = document.querySelector("#income");
@@ -25,6 +26,18 @@ const allList = document.querySelector("#all.list");
 // console.log(list)
 // // toggling fnx / listen for classname
 
+
+let activeTab = document.querySelector(".active")
+console.log(activeTab)
+let activePage = activeTab.getAttribute("data-tab")
+console.log(activePage)
+// activePage.style.display = 'none'
+hidePage();
+let active = document.getElementById(activePage)
+// activePage.style.display = "block";
+console.log(active)
+active.style.display = "block"
+
 for (i = 0; i <= buttons.length - 1; i++) {
   let button = buttons[i];
   //   button.classList.remove("active");
@@ -32,6 +45,13 @@ for (i = 0; i <= buttons.length - 1; i++) {
     // console.log(button);
     removeActive();
     button.classList.add("active");
+    let budgetTabs = e.target.dataset.tab;
+    // hidePage();
+    let page = document.getElementById(budgetTabs)
+    console.log(page);
+
+    hidePage();
+    page.style.display = "block";
   });
   // console.log(button[0])
 }
@@ -53,6 +73,7 @@ const list = document.querySelector(".incomeLists");
 // console.log(list.innerHTML)
 
 incomeAdd.addEventListener("click", () => {
+ 
   let li = document.createElement("LI");
   let item =
     '<div class="entry" > '+incomeTitle.value + " " + incomeAmount.value +' </div>' +
@@ -69,9 +90,70 @@ incomeAdd.addEventListener("click", () => {
 });
 
 // dashboard add expense
-const expenseAdd = document.querySelector("#add.expense");
-const expenseTitle = document.getElementById("expense-title-input");
-const expenseAmount = document.getElementById("expense=amount-input");
+// console.log(page)  
+function hidePage() {
+let page = document.getElementsByClassName("pages");
+      for (i = 0; i <= page.length - 1; i++) {
+        let incomePage = page[i];
+        incomePage.style.display = "none";
+      }
+}
+// hidePage()
+// function showPage() {
+//   for (i = 0; i <= page.length - 1; i++) {
+//     let incomePage = page[i];
+//     incomePage.style.display = "block";
+//   }
+// }
+
+// for (i = 0; i <= page.length - 1; i++) {
+//   let incomePage = page[i];
+//   incomePage.style.display = "none"
+// }
+  
+
+
+// let firstdiv = document.getElementsByClassName("first");
+// console.log(firstdiv)
+
+// if (firstdiv.style.display == "none") {
+//   firstdiv.style.display = "block";
+// } else {
+//  firstdiv.style.display = "block";
+// }
+
+
+// showStuff()
+
+
+// function openList1() {
+//   let firstdiv = document.getElementsByClassName("first");
+//   // var list = document.getElementById("ollist");
+
+//   if (firstdiv.style.display == "none") {
+//     firstdiv.style.display = "block";
+//   } 
+// }
+
+// openList1(firstdiv)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const expenseAdd = document.querySelector("#add.expense");
+// const expenseTitle = document.getElementById("expense-title-input");
+// const expenseAmount = document.getElementById("expense=amount-input");
 
 // function addEntry () {
 //    for (i = 0; i <= income.length - 1; i++) {
